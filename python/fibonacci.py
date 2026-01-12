@@ -19,7 +19,7 @@ def memoFib(n):
     return ans
 
 def main():
-    n = input("Enter num of fibonacci numbers you want: ")
+    n = int(input("Enter num of fibonacci numbers you want: "))
     result = memoFib(n)
     for num in result:
         print(num, end=' ')
