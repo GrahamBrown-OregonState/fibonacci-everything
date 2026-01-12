@@ -1,0 +1,28 @@
+def findFib(n):    
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return findFib(n-2) + findFib(n-1)
+
+
+def memoFib(n):
+    if n == 0:
+        return []
+    if n == 1:
+        return [0]
+    
+    ans = [0, 1]
+    for i in range(2, n):
+        ans.append(ans[i-1] + ans[i-2])  # Use previously calculated values
+    return ans
+
+def main():
+    n = int(input("Enter num of fibonacci numbers you want: "))
+    result = memoFib(n)
+    for num in result:
+        print(num, end=' ')
+
+if __name__ == "__main__":
+    main()
