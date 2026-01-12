@@ -10,6 +10,8 @@ class memo {
     memo();
 
     void set_fib_answers(int n);
+
+    int get_fib_ans(int n); 
 };
 
 memo::memo() {
@@ -18,7 +20,13 @@ memo::memo() {
 }
 
 void memo::set_fib_answers(int n) {
-    this->fib_ans.push_back(fib_ans.at(n - 1) + fib_ans.at(n - 2));
+    for (int i = 2; i < n; i++) {
+        this->fib_ans.push_back(fib_ans.at(i - 1) + fib_ans.at(i - 2));
+    }
+}
+
+int memo::get_fib_ans(int n) {
+    return this->fib_ans.at(n);
 }
 
 
