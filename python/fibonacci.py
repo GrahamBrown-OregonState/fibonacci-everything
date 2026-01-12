@@ -8,9 +8,14 @@ def findFib(n):
 
 
 def memoFib(n):
-    ans = []
-    for i in range(n):
-        ans.append(findFib(i))
+    if n == 0:
+        return []
+    if n == 1:
+        return [0]
+    
+    ans = [0, 1]
+    for i in range(2, n):
+        ans.append(ans[i-1] + ans[i-2])  # Use previously calculated values
     return ans
 
 def main():
