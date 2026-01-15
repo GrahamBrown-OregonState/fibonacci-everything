@@ -3,4 +3,5 @@ Computing the first n Fibonacci numbers in as many languages as possible
 
 ### Languages achieved:
 - Python
-- C++ 
+- C++
+- Rust
